@@ -13,7 +13,7 @@ export default {
             description : 'Connect your databases to your source control system'
         },
         {
-            name: 'SQL Prompt',
+            name: 'SQL Prompt pro',
             description : 'Write, format, and refactor SQL effortlessly'
         },
         {
