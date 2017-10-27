@@ -19,7 +19,7 @@ namespace app5
 
         public void AddProduct(Product p)
         {
-            Products.Append(p);
+            Products = Products.Append(p);
         }
 
         public void RemoveProduct(string name)
@@ -90,7 +90,7 @@ namespace app5
                 {
                     new Product
                     {
-                        Name= "SQL Bakup",
+                        Name= "SQL Backup",
                         Description = "Compresses, strengthens, and encrypts backups"
                     }
                 },
