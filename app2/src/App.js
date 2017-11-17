@@ -11,7 +11,13 @@ class App extends Component {
     
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.removeProduct = this.removeProduct.bind(this);
 
+  }
+
+  
+  removeProduct(name){
+    this.setState({products: this.state.products.filter(product => product.name !== name )});
   }
 
   handleSubmit(event) {
@@ -31,6 +37,7 @@ class App extends Component {
     });
   }
 
+
   render() {
     return <div className="App">
       <div className="App-header">
@@ -46,7 +53,7 @@ class App extends Component {
       </form>
       </div>
       <div className='products-container'>
-        <Products products={this.state.products} />
+        <Products products={this.state.products} removeAction={this.removeProduct} />
       </div>
     </div>
   }
