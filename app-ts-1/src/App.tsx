@@ -2,12 +2,22 @@ import * as React from 'react';
 import { Component } from 'react';
 import './App.css';
 import { GetData } from './data';
+import { ProductListProps } from './Models/ProductListProps';
+
+class ProductList extends Component<ProductListProps, {}> {
+  render(): JSX.Element {
+    const display = this.props.products.map( (product) => <li key={product.name}>{product.description}</li>);
+
+    return (<div>{display}</div>);
+  }
+} 
 
 
 class App extends Component {
   render(): JSX.Element {
-    const data = GetData();
-    const display = data.map((product) => <li key={product.name}>{product.description}</li>);
+    
+    let productListData = GetData();
+
     return (
       <div className='App'>
         <div className='App-header'>
@@ -16,7 +26,7 @@ class App extends Component {
         <p className='App-intro'>
           To get started change this text and then save to reload.
         </p>
-        {display}
+        <ProductList products={productListData} />
       </div>
       );
   }
