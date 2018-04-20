@@ -86,6 +86,12 @@ const data = {
             name: 'SQL Code Guard',
             description: 'Find code issues in an entire SQL Server database or a query window'
         },
+        {
+            name: 'SQL Freebie',
+            description: 'Improves your databases',
+            free: true,
+            new: true,
+        }
     ]
 };
 

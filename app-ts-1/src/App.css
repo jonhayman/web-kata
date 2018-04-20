@@ -18,3 +18,15 @@
     display: flex;
     justify-content: center;
   }
+
+  .free {
+    color: red;
+  }
+
+  .free.new {
+    color: purple;
+  }
+
+  .new {
+    color: blue;
+  }
