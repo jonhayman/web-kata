@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Component } from 'react';
 import './App.css';
 import { GetData } from './data';
-import { ProductListProps } from './Models/ProductListProps';
+import { ProductListProps } from './ProductListProps';
 
 class ProductList extends Component<ProductListProps, {}> {
   render(): JSX.Element {
@@ -29,8 +29,7 @@ class App extends Component {
         <ProductList products={productListData} />
       </div>
       );
-  }
-  
+  } 
 }
 
 
